@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using XLua;
+[Hotfix]
+[LuaCallCSharp]
 public class StrollBackGround : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
+    [LuaCallCSharp]
     public float strollSpeed = -5;
 
     public Transform[] strollBackground;
@@ -53,6 +56,9 @@ public class StrollBackGround : MonoBehaviour
                 Vector3 pos = transform1.position;
                 pos.x += _peerCount * _width;
                 transform1.position = pos;
+
+                //Update speed
+                background.GetComponent<Rigidbody2D>().velocity = new Vector2(strollSpeed, 0);
             }
         }
     }

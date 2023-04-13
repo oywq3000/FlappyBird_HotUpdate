@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2805802500
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a0293be9911ed18fbba5b60daa9b7473
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3f7d0c5e0986ec71841622bcb2f9be1c
+HashAppended: 0
+ClassTypes:
+- Class: 83
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Music/Sound/AwardClip.mp3
+- Assets/Music/Sound/FlapClip.mp3
+- Assets/Music/Sound/DeadClip.mp3
+Dependencies: []

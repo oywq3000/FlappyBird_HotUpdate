@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 4181345735
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: bgm
+      Dependencies: {}
+    Info_1:
+      Name: clip
+      Dependencies: {}

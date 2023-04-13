@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SimpleStroll : MonoBehaviour
 {
+    [HideInInspector]
     public float speed =-5 ;
 
     public float destroyX;
