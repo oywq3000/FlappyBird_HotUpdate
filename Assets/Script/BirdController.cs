@@ -2,7 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using XLua;
 
+[Hotfix]
+[LuaCallCSharp]
 public class BirdController : MonoBehaviour
 {
 
@@ -37,15 +40,17 @@ public class BirdController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+
+    public void OnCollisionEnter2D(Collision2D other)
     {
         isDead = true;
         _animator.SetTrigger("Dead");
         
         GameManager.Instance.OnDead();
+   
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         GameManager.Instance.OnOverObstacle();
         other.GetComponent<BoxCollider2D>().enabled = false;

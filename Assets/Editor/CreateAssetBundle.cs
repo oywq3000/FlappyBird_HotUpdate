@@ -1,8 +1,10 @@
 ﻿using UnityEditor;
+using UnityEngine;
 using UnityEngine.Windows;
 
 public class CreateAssetBundle 
 {
+   
    
    //add 
    [MenuItem("Assets/BuildAssetBundle")]

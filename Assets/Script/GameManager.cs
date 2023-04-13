@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         //engage hot update
         luaTool.DoString("GameControllerUpdate");
         luaTool.DoString("ResourceUpdate");
+        luaTool.DoString("AudioControlUpdate");
     }
 
     // Update is called once per frame

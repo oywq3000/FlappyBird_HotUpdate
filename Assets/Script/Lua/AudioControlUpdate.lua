@@ -4,3 +4,37 @@
 --- DateTime: 2023-04-13 18:25
 ---
 
+--Bgm
+bamPlayer = CS.UnityEngine.GameObject.Find("BamPlayer"):GetComponent(typeof(CS.UnityEngine.AudioSource));
+
+index = CS.UnityEngine.Random.Range(1, 4)
+clipName = "BGM_0" .. tostring(math.modf(index))
+CS.UnityEngine.Debug.Log(clipName)
+CS.UnityEngine.Debug.Log(CS.ResourceLoader.BgmLoad(clipName))
+
+bamPlayer:PlayOneShot(CS.ResourceLoader.BgmLoad(clipName))
+bamPlayer.loop = true;
+
+
+---Sound
+
+soundPlayer = CS.UnityEngine.GameObject.Find("SoundPlayer"):GetComponent(typeof(CS.UnityEngine.AudioSource));
+
+local util = require("util")
+util.hotfix_ex(CS.BirdController, 'Update', function(self)
+    if self.isDead == false then
+        if CS.UnityEngine.Input.GetKeyDown(CS.UnityEngine.KeyCode.Mouse0) then
+            soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("FlapClip"))
+        end
+        self:Update();
+    end
+end)
+
+util.hotfix_ex(CS.BirdController, 'OnCollisionEnter2D', function(self,other)
+    soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("DeadClip"))
+    self:OnCollisionEnter2D(other);
+end)
+util.hotfix_ex(CS.BirdController, 'OnTriggerEnter2D', function(self,other)
+    soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("AwardClip"))
+    self:OnTriggerEnter2D(other);
+end)

@@ -119,6 +119,7 @@
             <e p="ExampleGenConfig.cs" t="Include" />
           </e>
           <e p="Gen" t="Include">
+            <e p="BirdControllerWrap.cs" t="Include" />
             <e p="DelegatesGensBridge.cs" t="Include" />
             <e p="EnumWrap.cs" t="Include" />
             <e p="GameManagerWrap.cs" t="Include" />
