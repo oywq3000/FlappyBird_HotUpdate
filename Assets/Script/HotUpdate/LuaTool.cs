@@ -26,7 +26,7 @@ namespace Script
             //  Debug.Log(filePath);
             // return System.Text.Encoding.UTF8.GetBytes(filePath);
 
-            string path = "G:\\WorkPlace\\GitRepo\\Unity\\HotUpdateFlappyBird\\Assets\\Script\\Lua\\"+filePath+".lua";
+            string path = Directory.GetCurrentDirectory()+"\\Assets\\Script\\Lua\\"+filePath+".lua";
             
             //transform to binary file 
             return System.Text.Encoding.UTF8.GetBytes(File.ReadAllText(path));

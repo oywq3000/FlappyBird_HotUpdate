@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
         _currentScore = 0;
         LuaTool luaTool = new LuaTool();
         //engage hot update
-        luaTool.DoString("GameControllerUpdate");
+     luaTool.DoString("GameControllerUpdate");
         luaTool.DoString("ResourceUpdate");
         luaTool.DoString("AudioControlUpdate");
     }

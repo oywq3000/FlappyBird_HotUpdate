@@ -30,11 +30,16 @@ util.hotfix_ex(CS.BirdController, 'Update', function(self)
     end
 end)
 
-util.hotfix_ex(CS.BirdController, 'OnCollisionEnter2D', function(self,other)
-    soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("DeadClip"))
-    self:OnCollisionEnter2D(other);
+util.hotfix_ex(CS.BirdController, 'OnCollisionEnter2D', function(self, other)
+    if self.isDead == false then
+        soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("DeadClip"))
+        self:OnCollisionEnter2D(other);
+    end
+    
 end)
-util.hotfix_ex(CS.BirdController, 'OnTriggerEnter2D', function(self,other)
-    soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("AwardClip"))
-    self:OnTriggerEnter2D(other);
+util.hotfix_ex(CS.BirdController, 'OnTriggerEnter2D', function(self, other)
+    if self.isDead == false then
+        soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("AwardClip"))
+        self:OnTriggerEnter2D(other);
+    end
 end)
