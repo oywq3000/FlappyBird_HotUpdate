@@ -5,11 +5,6 @@
 ---
 ---override spawn
 local util = require("util")
-util.hotfix_ex(CS.SpawnObstacle,'Spawn',function(self)
-    if CS.GameManager.Instance.isGameOver==false then
-        self:Spawn();
-    end
-end)
 
 --register restart button
 CS.UnityEngine.Debug.Log("Register Button")
@@ -21,17 +16,56 @@ end
 
 --mounting game hard
 
+local spawnTimer = 0;
+ obstacleSpeed = 0;
+
 xlua.hotfix(CS.GameManager, 'Update', function(self)
-    if  self.spawnObstacle.spawnCd>1 then
-        self.spawnObstacle.spawnCd = self.spawnObstacle.spawnCd- CS.UnityEngine.Time.deltaTime/10
+    if self.spawnObstacle.spawnCd > 1 then
+        self.spawnObstacle.spawnCd = self.spawnObstacle.spawnCd - CS.UnityEngine.Time.deltaTime / 10
     end
-    if self.spawnObstacle.obstacleSpeed>-10 then
-        self.spawnObstacle.obstacleSpeed = self.spawnObstacle.obstacleSpeed- CS.UnityEngine.Time.deltaTime/10
+    if self.spawnObstacle.obstacleSpeed > -10 then
+        obstacleSpeed  = self.spawnObstacle.obstacleSpeed - CS.UnityEngine.Time.deltaTime / 10
+        self.spawnObstacle.obstacleSpeed = obstacleSpeed
     end
-    if self.strollBackGround.strollSpeed>-10 then
-        self.strollBackGround.strollSpeed =  self.strollBackGround.strollSpeed-CS.UnityEngine.Time.deltaTime/10
+    if self.strollBackGround.strollSpeed > -10 then
+        self.strollBackGround.strollSpeed = self.strollBackGround.strollSpeed - CS.UnityEngine.Time.deltaTime / 10
+    end
+
+    if spawnTimer<7 then
+        spawnTimer = spawnTimer + CS.UnityEngine.Time.deltaTime/3;
     end
 end)
+
+local vector3 =  CS.UnityEngine.Vector3(14, 0, 0)
+local indentity = CS.UnityEngine.Quaternion.identity
+
+xlua.hotfix(CS.SpawnObstacle, 'Spawn', function(self)
+
+    if CS.GameManager.Instance.isGameOver == true then
+        return
+    end
+    
+    index = CS.UnityEngine.Random.Range(spawnTimer, 10)
+    if index < 8 then
+        if CS.UnityEngine.Random.Range(0,2)>1 then
+            obstacle= CS.ResourceLoader.LoadObstacle("Obstacle_Single_Low")
+        else
+            obstacle= CS.ResourceLoader.LoadObstacle("Obstacle_Single_Up")
+        end
+    else
+        obstacle= CS.ResourceLoader.LoadObstacle("Obstacle")
+    end
+    
+    vector3.y = CS.UnityEngine.Random.Range(-2.28, 2.26)
+    CS.UnityEngine.Debug.Log(self.transform)
+    CS.UnityEngine.Object.Instantiate(obstacle,vector3,
+            CS.UnityEngine.Quaternion.identity,self.transform):GetComponent(typeof(CS.SimpleStroll))
+            .speed = obstacleSpeed;
+end)
+
+
+
+--
 
 --[[
 util.hotfix_ex(CS.StrollBackGround,'Update',function(self)

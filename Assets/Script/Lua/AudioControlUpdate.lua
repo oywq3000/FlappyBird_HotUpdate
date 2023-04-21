@@ -33,7 +33,7 @@ end)
 util.hotfix_ex(CS.BirdController, 'OnCollisionEnter2D', function(self, other)
     if self.isDead == false then
         soundPlayer:PlayOneShot(CS.ResourceLoader.SoundLoad("DeadClip"))
-        self:OnCollisionEnter2D(other);
+       self:OnCollisionEnter2D(other);
     end
     
 end)

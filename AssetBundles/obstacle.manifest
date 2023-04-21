@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 542438325
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d095e1d731621e8e778eb811d0189ac1
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cdc8c675d85ecc00190cae477b267057
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 50
+  Script: {instanceID: 0}
+- Class: 61
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 2d67138034ff43e40a018cdaedab11de, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 212
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/Obstacle_Single_Low.prefab
+- Assets/Obstacle.prefab
+- Assets/Obstacle_Single_Up.prefab
+Dependencies: []

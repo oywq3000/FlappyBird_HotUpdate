@@ -8,5 +8,6 @@
 CS.UnityEngine.Debug.Log("Load Resource")
 CS.ResourceLoader.SetBgmPackName("bgm");
 CS.ResourceLoader.SetSoundPackName("clip");
+CS.ResourceLoader.SetObstaclePackName("obstacle");
 CS.ResourceLoader:LazyLoadInit();
 

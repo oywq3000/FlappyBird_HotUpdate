@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     [LuaCallCSharp]
     public bool isGameOver = false;
 
-    
+    private LuaTool _luaTool;
     
     public Transform gameOverPanel;
     public Text scoreText;
@@ -28,18 +28,19 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-       
+     
     }
 
     // Start is called before the first frame update
     void Start()
     {
         _currentScore = 0;
-        LuaTool luaTool = new LuaTool();
+         _luaTool = new LuaTool();
         //engage hot update
-     luaTool.DoString("GameControllerUpdate");
-        luaTool.DoString("ResourceUpdate");
-        luaTool.DoString("AudioControlUpdate");
+        _luaTool.DoString("GameControllerUpdate");
+        _luaTool.DoString("ResourceUpdate");
+        _luaTool.DoString("AudioControlUpdate");
+        
     }
 
     // Update is called once per frame
@@ -63,6 +64,6 @@ public class GameManager : MonoBehaviour
 
     private void OnDestroy()
     {
-       
+        _luaTool.DoString("Dispose");
     }
 }

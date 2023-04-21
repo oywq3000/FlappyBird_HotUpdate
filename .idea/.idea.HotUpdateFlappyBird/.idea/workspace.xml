@@ -2,13 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="00780fd5-f246-4cd2-a0da-dc1150a1a941" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Script/Lua/Dispose.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.HotUpdateFlappyBird/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotUpdateFlappyBird/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HotUpdateFlappyBird/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HotUpdateFlappyBird/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetBundles/AssetBundles" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/AssetBundles" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AssetBundles/AssetBundles.manifest" beforeDir="false" afterPath="$PROJECT_DIR$/AssetBundles/AssetBundles.manifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Obstacle.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Obstacle.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Script/Lua/AudioControlUpdate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Lua/AudioControlUpdate.lua" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Xlua.Core.Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Xlua.Core.Editor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Xlua.Core.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Xlua.Core.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Lua/GameControllerUpdate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Lua/GameControllerUpdate.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/Lua/ResourceUpdate.lua" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/Lua/ResourceUpdate.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/ResourceLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/ResourceLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Script/SpawnObstacle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Script/SpawnObstacle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Editor/ExampleConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/XLua/Editor/ExampleConfig.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +37,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Script/ResourceLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/SpawnObstacle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/StrollBackGround.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ABD035AC-C9CE-4F44-94B0-30BD4E0A73A4/ac/b545ca53/AssetBundle.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/SimpleStroll.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Script/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -39,18 +48,19 @@
       <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/SimpleStroll.cs" />
       <option value="$PROJECT_DIR$/Assets/BirdController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/HotUpdate/LuaTool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/SpawnObstacle.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/StrollBackGround.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/Lua/GameControllerUpdate.lua" />
       <option value="$PROJECT_DIR$/Assets/Script/Lua/AudioController.lua" />
       <option value="$PROJECT_DIR$/Assets/Script/SimpleStroll.cs" />
       <option value="$PROJECT_DIR$/Assets/Editor/CreateAssetBundle.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/BirdController.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/ResourceLoader.cs" />
-      <option value="$PROJECT_DIR$/Assets/Script/Lua/ResourceUpdate.lua" />
-      <option value="$PROJECT_DIR$/Assets/Script/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Script/HotUpdate/LuaTool.cs" />
       <option value="$PROJECT_DIR$/Assets/Script/Lua/AudioControlUpdate.lua" />
+      <option value="$PROJECT_DIR$/Assets/Script/Lua/ResourceUpdate.lua" />
+      <option value="$PROJECT_DIR$/Assets/Script/ResourceLoader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Script/SpawnObstacle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Script/Lua/Dispose.lua" />
+      <option value="$PROJECT_DIR$/Assets/Script/Lua/GameControllerUpdate.lua" />
+      <option value="$PROJECT_DIR$/Assets/Script/GameManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="2OIvd6tTr7hMDDMIIp3VqSs4PIF" />
@@ -102,6 +112,10 @@
       <workItem from="1681368293629" duration="20603000" />
       <workItem from="1681390455857" duration="466000" />
       <workItem from="1681396123431" duration="297000" />
+      <workItem from="1681443639301" duration="6619000" />
+      <workItem from="1681886383458" duration="10232000" />
+      <workItem from="1682053323210" duration="131000" />
+      <workItem from="1682054049178" duration="1698000" />
     </task>
     <task id="LOCAL-00001" summary="finish pre_hotupdate works">
       <created>1681368452118</created>
@@ -124,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681390344169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="switch to relative path for lua dictory">
+      <created>1681444130881</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681444130881</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +170,7 @@
     <MESSAGE value="finish pre_hotupdate works" />
     <MESSAGE value="finish resouce and gamemanger hotupdate" />
     <MESSAGE value="finish all HotUpdate Compleletely" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish all HotUpdate Compleletely" />
+    <MESSAGE value="switch to relative path for lua dictory" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch to relative path for lua dictory" />
   </component>
 </project>

@@ -36,7 +36,7 @@ public class SpawnObstacle : MonoBehaviour
     }
     
     [LuaCallCSharp]
-    void Spawn()
+   public void Spawn()
     {
         Instantiate(obstaclePrefab, new Vector3(spawnPositionX, Random.Range(lowLimit, highLimit), 0),
             Quaternion.identity, transform).GetComponent<SimpleStroll>().speed = obstacleSpeed;

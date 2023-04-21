@@ -10,8 +10,10 @@ public static class ResourceLoader
 
     private static AssetBundle _bgmAsset;
     private static AssetBundle _soundAsset;
+    private static AssetBundle _obstacleAsset;
     private static string _bgmPackName = "bgm";
     private static string _soundPackName = "clip";
+    private static string _obstacleName = "obstacle";
 
 
     public static void LazyLoadInit()
@@ -25,7 +27,12 @@ public static class ResourceLoader
         {
             _soundAsset = AssetBundle.LoadFromFile($"AssetBundles/{_soundPackName}");
         }
-      
+
+        if (_obstacleAsset == null)
+        {
+            _obstacleAsset = AssetBundle.LoadFromFile($"AssetBundles/{_obstacleName}");
+        }
+        
       
     }
    
@@ -57,6 +64,19 @@ public static class ResourceLoader
         }
     }
 
+    public static GameObject LoadObstacle(string obstacleName)
+    {
+        if (_obstacleAsset!=null)
+        {
+            return _obstacleAsset.LoadAsset<GameObject>(obstacleName);
+        }
+        else
+        {
+            _obstacleAsset = AssetBundle.LoadFromFile($"AssetBundles/{_obstacleName}");
+            return _obstacleAsset.LoadAsset<GameObject>(obstacleName);
+        }
+       
+    }
     public static void SetBgmPackName(string bgmPackName)
     {
         _bgmPackName = bgmPackName;
@@ -65,4 +85,11 @@ public static class ResourceLoader
     {
         _soundPackName = soundPackName;
     }
+
+    public static void SetObstaclePackName(string obstacleName)
+    {
+        _obstacleName = obstacleName;
+    }
+    
+    
 }
